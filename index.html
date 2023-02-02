@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" defer src="./scripts.js"></script>
+  <title>HTML Video Player</title>
+</head>
+<body>
+
+  <header>
+    <h1 id="title">Maxwell Motivation</h1>
+  </header>
+
+  <main>
+    <div class="player">
+      <video class="player__video viewer" src="./Maxwell-motivation.mp4"></video>
+      <div class="player__controls">
+        <div class="progress">
+        <div class="progress__filled"></div>
+        </div>
+        <button class="player__button toggle" title="Toggle Play">►</button>
+        <div class="playVolume">
+          <label for="volume" class="playVolume playbackLabels">Volume:</label>
+          <input type="range" name="volume" class="player__slider" min="0" max="1" step="0.05" value="1">
+        </div>
+        <!-- <input type="range" name="playbackRate" class="player__slider" min="0.5" max="5" step="0.1" value="1"> -->
+        <div class="playback">
+          <span class="playSpeed playbackLabels">Playback Speed:</span>
+          <input type="radio" name="playbackRate" value="0.5" class="radioButtons playSpeed">
+          <label for="playbackRate" class="playbackLabels">0.5</label>
+          <input type="radio" name="playbackRate" value="1" class="radioButtons playSpeed" checked>
+          <label for="playbackRate" class="playbackLabels">1</label>
+          <input type="radio" name="playbackRate" value="2" class="radioButtons playSpeed">
+          <label for="playbackRate" class="playbackLabels">2</label>
+        </div>
+        <button data-skip="-10" class="player__button">« 10s</button>
+        <button data-skip="25" class="player__button">25s »</button>
+        <button class="player__button fullscreen"><i class="icon-fullscreen"></i></button>
+      </div>
+    </div>
+  </main>
+
+  <Footer>
+    <div class="left">
+      <a id="github" href="https://github.com/javascript-30-challenge/11-Custom-Video-Player"><i class='fa fa-github icon-style' style="font-size:40px"></i></a>
+    </div>
+    <div class="right">
+      <span id="copyright">&copy Copyright 2023</span>
+    </div>
+  </Footer>
+
+</body>
+</html>
